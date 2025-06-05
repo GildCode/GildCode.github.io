@@ -7,7 +7,7 @@
         <!-- Foto Redonda -->
         <div class="w-48 h-48 sm:w-64 sm:h-64 mb-6">
           <img
-            src='@/assets/foto.png'
+            src="foto"
             alt="Foto de Gildardo"
             class="w-full h-full object-cover rounded-full border-4 border-indigo-600"
           />
@@ -55,6 +55,8 @@
 </template>
 
 <script>
+
+import foto from '@/assets/foto.png'
 export default {
   name: 'About'
 }
