@@ -56,7 +56,7 @@
 
 <script>
 
-import foto from '@/assets/foto.png'
+import foto from '../foto.png'
 export default {
   name: 'About',
   data() {

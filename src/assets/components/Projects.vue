@@ -1,3 +1,28 @@
+<script>
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+export default {
+  components: { Swiper, SwiperSlide },
+  data() {
+    return {
+      projects: []
+    }
+  },
+  mounted() {
+    fetch('http://localhost:8080/api/projects')
+      .then(res => {
+        if (!res.ok) throw new Error('Error al cargar proyectos')
+        return res.json()
+      })
+      .then(data => {
+        this.projects = data
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }
+}
+</script>
 <template>
   <section id="projects" class="py-20 bg-white text-gray-800">
     <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
