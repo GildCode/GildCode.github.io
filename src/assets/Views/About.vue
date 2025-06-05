@@ -7,7 +7,7 @@
         <!-- Foto Redonda -->
         <div class="w-48 h-48 sm:w-64 sm:h-64 mb-6">
           <img
-            src="C:\Users\GILD\Desktop\Portafolio\src\assets\foto.png"
+            src="../foto.png"
             alt="Foto de Gildardo"
             class="w-full h-full object-cover rounded-full border-4 border-indigo-600"
           />
