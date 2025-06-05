@@ -22,7 +22,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(process.env.NODE_ENV === 'production' ? '/GildCode.github.io/' : '/'),
+  history: createWebHashHistory(), 
   routes
 })
 
