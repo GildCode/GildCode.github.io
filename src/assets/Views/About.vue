@@ -58,6 +58,11 @@
 
 import foto from '@/assets/foto.png'
 export default {
-  name: 'About'
+  name: 'About',
+  data() {
+    return {
+      foto
+    }
+  }
 }
 </script>
