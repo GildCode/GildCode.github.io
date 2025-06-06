@@ -55,9 +55,9 @@ const sending = ref(false)
 const success = ref(false)
 const error = ref(false)
 
-const serviceID = 'service_z2b0v7e'      // reemplaza con tu service ID
-const templateID = 'template_tvx177y'    // reemplaza con tu template ID
-const userID = 'hhc9ZYOpJ7JiusH4s'            // reemplaza con tu user ID
+const serviceID = 'service_z2b0v7e'      
+const templateID = 'template_tvx177y'    
+const userID = 'hhc9ZYOpJ7JiusH4s'            
 
 function sendEmail() {
   sending.value = true
