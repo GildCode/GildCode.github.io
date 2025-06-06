@@ -16,23 +16,30 @@ export default {
   },
   methods: {
     async fetchProjects() {
-      try {
-        const baseUrl = 'https://gestor-proyectos-production.up.railway.app'
-        const response = await fetch(`${baseUrl}/api/projects`)
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        
-        const data = await response.json()
-        this.projects = data
-      } catch (error) {
-        console.error('Error al obtener proyectos:', error)
-        this.error = 'No se pudieron cargar los proyectos desde la API.'
-      } finally {
-        this.loading = false
-      }
+  try {
+    const baseUrl = 'https://gestor-proyectos-production.up.railway.app'
+    const response = await fetch(`${baseUrl}/api/projects`)
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
     }
+
+    const data = await response.json()
+    console.log('Proyectos recibidos:', data)
+
+    if (!Array.isArray(data)) {
+      throw new Error('La respuesta no es un array de proyectos')
+    }
+
+    this.projects = data
+  } catch (error) {
+    console.error('Error al obtener proyectos:', error)
+    this.error = error.message
+  } finally {
+    this.loading = false
+  }
+}
+
   }
 }
 </script>
