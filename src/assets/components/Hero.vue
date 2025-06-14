@@ -1,7 +1,7 @@
 <template>
   <section
     id="hero"
-    class="text-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-indigo-800 to-indigo-900"
+    class="text-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-indigo-600"
   >
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">¡Hola mundo! Soy</h2>
     <h1
